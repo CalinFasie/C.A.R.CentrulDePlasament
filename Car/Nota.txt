@@ -1,0 +1,17 @@
+Unde se modifica calea programului
+
+Retineri.java
+Line 1087
+
+SQLQueryBeanTest.java 	
+Line 8
+Line 21
+
+MySQLConnect.java
+Line 15
+
+javaconnect.java
+Line 14
+
+ExportCar.java
+Line 58

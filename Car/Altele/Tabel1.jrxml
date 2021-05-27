@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Tabel1" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="41e01104-9108-4ae7-a2ed-07b7d5bfc6db">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString language="SQL">
+		<![CDATA[select an,luna,nume,marca,taxa,dobanda,rata,fond,retinere from Print ;]]>
+	</queryString>
+	<field name="an" class="java.lang.Object"/>
+	<field name="luna" class="java.lang.Object"/>
+	<field name="nume" class="java.lang.Object"/>
+	<field name="marca" class="java.lang.Object"/>
+	<field name="taxa" class="java.lang.Object"/>
+	<field name="dobanda" class="java.lang.Object"/>
+	<field name="rata" class="java.lang.Object"/>
+	<field name="fond" class="java.lang.Object"/>
+	<field name="retinere" class="java.lang.Object"/>
+	<variable name="T_retinere" class="java.lang.Integer" calculation="Sum">
+		<variableExpression><![CDATA[$F{retinere}]]></variableExpression>
+	</variable>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="72">
+			<frame>
+				<reportElement mode="Opaque" x="-20" y="-20" width="595" height="92" forecolor="#FFFFFF" backcolor="#FFFFFF" uuid="99fffa11-87c4-4ac1-90d1-3088cad79e9c"/>
+				<staticText>
+					<reportElement x="216" y="20" width="292" height="43" forecolor="#000000" backcolor="#FFFFFF" uuid="977d93dd-1a58-4ba0-94dd-36207a12a8db"/>
+					<textElement>
+						<font size="13" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Borderou nr.__________________]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="20" y="0" width="251" height="20" forecolor="#000000" uuid="bd962050-7cc6-4b17-9dbe-ecb62c0b1a1b"/>
+					<textElement textAlignment="Right">
+						<font size="14" isBold="true"/>
+					</textElement>
+					<text><![CDATA[C.A.R. Centrul de Plasament nr. 1]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="360" y="63" width="32" height="20" uuid="808662c7-1ac6-4005-8d29-5e07fa7899fb"/>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{an}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement x="81" y="63" width="257" height="20" uuid="0f4887de-b6a4-4377-ae6c-f26fa34aecae"/>
+					<text><![CDATA[Pentru incasarile efectuate de membrii C.A.R. pe luna ]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true">
+					<reportElement x="338" y="63" width="22" height="20" uuid="8c8aa3ce-e13d-4236-8ce7-f6aec33a5649"/>
+					<textElement>
+						<font fontName="Times New Roman" size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[""+$F{luna}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="21">
+			<line>
+				<reportElement x="0" y="20" width="555" height="1" forecolor="#666666" uuid="87c26ffe-3b73-438b-b48f-6e6df06db89f"/>
+			</line>
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="61" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="7b0204af-b2d9-4f54-a1c7-63089210337e"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nr.crt.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="61" y="0" width="61" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="10844c58-792a-4d8c-b788-18cd81bd206a"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nume]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="251" y="0" width="43" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="db7ab3d0-a62c-4202-8542-cdce65f7c0f5"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Marca]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="294" y="0" width="40" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="dec19da9-a6e7-4b3c-ba36-919303a3b5d2"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Taxa]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="334" y="0" width="61" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="689abfe1-3366-44c0-9337-cde28ac1b54c"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Dobanda]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="398" y="0" width="32" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="24e8b4e8-20be-4772-a435-71ca22264f31"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Rata]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="447" y="0" width="41" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="5a981bba-75f5-4ff4-a220-2ba2732130fd"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fond]]></text>
+			</staticText>
+			<staticText>
+				<reportElement mode="Opaque" x="488" y="0" width="61" height="20" forecolor="#000000" backcolor="#FFFFFF" uuid="a8ea3f8c-36a3-465c-a275-58a3f6f3f169"/>
+				<textElement textAlignment="Center">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Retinere]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="20">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="19" width="555" height="1" uuid="1b35a6c2-c004-47dc-b164-e9ea0e34e5cd"/>
+			</line>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="0" y="0" width="32" height="20" uuid="d3e930c8-772c-40c5-9cc4-5ceae7219d2f"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{REPORT_COUNT}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="61" y="0" width="190" height="20" uuid="62321482-0ba8-4cce-b18d-192004e23f33"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{nume}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="251" y="0" width="43" height="20" uuid="325b3029-d2a4-4efa-a016-33352b457b46"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{marca}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="294" y="0" width="24" height="20" uuid="9ee20cc8-3368-4669-b293-a996236429dd"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{taxa}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="334" y="0" width="29" height="20" uuid="bfffe243-21d1-41ee-beaf-fd6da5f5142e"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{dobanda}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="398" y="0" width="32" height="20" uuid="ef43f360-29e9-451f-9634-dace8934b771"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{rata}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="447" y="0" width="22" height="20" uuid="e4ff7e12-a3a3-4d28-af47-650bcfd09acf"/>
+				<textElement>
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{fond}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement x="515" y="0" width="27" height="20" uuid="cc2afd8b-4c73-43f4-958b-3620faf6ab31"/>
+				<textElement textAlignment="Right">
+					<font fontName="Times New Roman" size="12"/>
+				</textElement>
+				<textFieldExpression><![CDATA[""+$F{retinere}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="20"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="17">
+			<textField>
+				<reportElement mode="Opaque" x="0" y="4" width="515" height="13" backcolor="#E6E6E6" uuid="c5487f7f-3101-4097-86ca-f751c0ff9bb4"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of "]]></textFieldExpression>
+			</textField>
+			<textField pattern="EEEEE dd MMMMM yyyy">
+				<reportElement x="0" y="4" width="100" height="13" uuid="ab901cb6-79d0-4873-b1af-d273bbc1c4f1"/>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report">
+				<reportElement mode="Opaque" x="509" y="4" width="40" height="13" backcolor="#E6E6E6" uuid="e6c363c2-bab9-44f5-aa1a-e5de5067dc51"/>
+				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="20">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="19ec48de-c5ed-4b44-b1b6-f10db31ceb0d"/>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="506" y="0" width="43" height="20" uuid="fffca622-293f-42d7-bb43-f537f7bdc974"/>
+				<textElement textAlignment="Right">
+					<font size="14" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$V{T_retinere}]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>
